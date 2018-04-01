@@ -1,0 +1,30 @@
+{
+  "name": "arrilot/vue-templates-in-php",
+  "license": "MIT",
+  "keywords": [
+    "vue"
+  ],
+  "authors": [
+    {
+      "name": "Nekrasov Ilya",
+      "email": "nekrasov.ilya90@gmail.com"
+    }
+  ],
+  "homepage": "https://github.com/arrilot/vue-templates-in-php",
+  "require": {
+    "php": ">=7.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Arrilot\\VueTemplates\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Arrilot\\Tests\\VueTemplates\\": "tests/"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+test template7 <?= $data['foo'] ?>
