@@ -98,10 +98,10 @@ class TemplateManager
                     continue;
                 }
 
-                ?><script type="text/x-template" id="vue-<?= htmlspecialchars($name, ENT_COMPAT, "UTF-8") ?>-template"><?
+                ?><script type="text/x-template" id="vue-<?= htmlspecialchars($name, ENT_COMPAT, "UTF-8") ?>-template"><?php
                     $data = $template['data'];
                     require $this->path . '/' . str_replace('.', '/', $name) . '.php';
-                ?></script><?
+                ?></script><?php
 
                 // mark template as already printed.
                 $this->templates[$name] = false;
