@@ -12,7 +12,7 @@
 
 ## Usage
 
-First of all a helper like that
+First of all create a helper like that
 
 ```php
 function vue()
