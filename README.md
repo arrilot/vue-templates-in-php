@@ -6,6 +6,16 @@
 
 ## Introduction
 
+There are two main ways to deal with vue components' templates:
+1. Single file components
+2. `<script type="text/x-template">`
+    
+Single files components are great, but they have their own problems:
+1. You need a decent build setup.
+2. You can't manage templates from php directly.
+If this is not an issue for you - go with them, you don't need this package then.
+Otherwise this small packages can help you to set up `<script type="text/x-template">` scheme in a simple and maintainable way.
+
 ## Installation
 
 1. `composer require arrilot/vue-templates-in-php`
