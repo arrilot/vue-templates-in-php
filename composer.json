@@ -1,5 +1,6 @@
 {
   "name": "arrilot/vue-templates-in-php",
+  "description": "A simple package to manage vue components' templates in php",
   "license": "MIT",
   "keywords": [
     "vue"
