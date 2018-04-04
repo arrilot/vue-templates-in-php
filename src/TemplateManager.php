@@ -39,7 +39,6 @@ class TemplateManager
      */
     public function addTemplate($name, $data = [])
     {
-        $name = str_replace('/', '.', $name);
         if (!isset($this->templates[$name]) || $this->templates[$name] !== false) {
             $this->templates[$name] = compact('name', 'data');
         }
@@ -98,9 +97,9 @@ class TemplateManager
                     continue;
                 }
 
-                ?><script type="text/x-template" id="vue-<?= htmlspecialchars($name, ENT_COMPAT, "UTF-8") ?>-template"><?php
+                ?><script type="text/x-template" id="vue-<?= htmlspecialchars(str_replace('/', '-', $name), ENT_COMPAT, "UTF-8") ?>-template"><?php
                     $data = $template['data'];
-                    require $this->path . '/' . str_replace('.', '/', $name) . '.php';
+                    require $this->path . '/' . $name . '.php';
                 ?></script><?php
 
                 // mark template as already printed.
