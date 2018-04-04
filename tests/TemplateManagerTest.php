@@ -67,13 +67,11 @@ class TemplateManagerTest extends TestCase
     
     public function test_templates_in_subfolders()
     {
-        $this->vue->addTemplate('some_dir.test5');
-        $this->vue->addTemplate('some_dir/test6');
+        $this->vue->addTemplate('some_dir/test5');
         
         ob_start();
         $this->vue->printTemplates();
-        $expected = '<script type="text/x-template" id="vue-some_dir.test5-template">test template5</script>';
-        $expected .= '<script type="text/x-template" id="vue-some_dir.test6-template">test template6</script>';
+        $expected = '<script type="text/x-template" id="vue-some_dir-test5-template">test template5</script>';
 
         $this->assertSame($expected, ob_get_clean());
     }
